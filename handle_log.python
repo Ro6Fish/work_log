@@ -111,8 +111,6 @@ def send_mail(title):
 def main():
     cur_date = date_delay(0)
 
-    print('main():%s' % cur_date)
-
     # 判断当天日期是否是假期，如果是则什么都不做，如果不是则继续判断当前日期的后一天日期
     if not is_holiday(cur_date):
         # 当前日期的后一天日期如果不是假期则什么也不做，如果是假期则计算出当前时间以前最早不是假期的日期
@@ -138,9 +136,12 @@ def main():
             is_send = send_mail(title)
 
             if is_send:
-                '2019_0623-0624'
-                start_month = start_date = datetime.datetime.strftime(before_date, '%m%d')
-                shutil.copy(path.join(dir_path, 'log.md'), path.join(dir_path, '%s_%s-%s' % (datetime.datetime.year,)))
+                # 文件名 2019_0623-0624.md
+                start_month = datetime.datetime.strftime(before_date, '%m%d')
+                end_month = datetime.datetime.strftime(cur_date, '%m%d')
+
+                shutil.copy(path.join(dir_path, 'log.md'),
+                            path.join(dir_path, '%s_%s-%s.md' % (base_datetime.year, start_month, end_month)))
 
             print("是否发送：%s" % is_send)
 
