@@ -200,9 +200,9 @@ def main():
         print('当前日期是假期，不用发送周报')
 
 
-# 执行程序
-# main()
+os.popen('git pull')
 
-# is_holiday(base_datetime)
+# 执行程序
+main()
 
 os.popen('./git.sh')
