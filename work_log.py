@@ -17,8 +17,8 @@ conf = configparser.ConfigParser()
 
 conf.read(path.join(dir_path, 'config.ini'))
 
-# base_datetime = datetime.datetime.now()
-base_datetime = datetime.datetime.strptime('2019-06-28', '%Y-%m-%d')
+base_datetime = datetime.datetime.now()
+# base_datetime = datetime.datetime.strptime('2019-06-28', '%Y-%m-%d')
 
 # 接口是否正常，默认true正常
 is_api_ok = True
@@ -44,7 +44,10 @@ def is_holiday(date):
 
         # 调用接口比对此日期是否是假日 date_format
         if date_type != 0:
+            print('假日')
             return True
+        else:
+            print('工作日')
 
     except (OSError, JSONDecodeError, KeyError):
         # 异常情况发送邮件提醒
