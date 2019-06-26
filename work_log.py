@@ -17,8 +17,8 @@ conf = configparser.ConfigParser()
 
 conf.read(path.join(dir_path, 'config.ini'))
 
-base_datetime = datetime.datetime.now()
-# base_datetime = datetime.datetime.strptime('2019-06-28', '%Y-%m-%d')
+#base_datetime = datetime.datetime.now()
+base_datetime = datetime.datetime.strptime('2019-06-28', '%Y-%m-%d')
 
 # 接口是否正常，默认true正常
 is_api_ok = True
