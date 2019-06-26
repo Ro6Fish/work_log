@@ -186,7 +186,7 @@ def main():
 
                     # 重置文件内容
                     log_init_content = '本周任务:\n\n\n\n\n\n下周任务:\n\n- 日常运维工作  '
-                    log_file = open('log.md', 'w')
+                    log_file = open(path.join(dir_path, 'log.md'), 'w')
                     log_file.write(log_init_content)
                     log_file.close()
 
