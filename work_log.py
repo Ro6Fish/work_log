@@ -205,4 +205,4 @@ os.popen('git pull')
 # 执行程序
 main()
 
-os.popen('./git.sh')
+os.popen(path.join(dir_path, 'git.sh'))
