@@ -105,7 +105,7 @@ def send_mail(title):
 
     subject = title
 
-    log_file = open('./log.md')
+    log_file = open(path.join(dir_path, 'log.md'))
     read = log_file.read()
     log_file.close()
 
