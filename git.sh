@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# 获取当前脚本目录
 project_path=$(cd `dirname $0`; pwd)
 
 cd ${project_path}
