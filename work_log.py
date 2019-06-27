@@ -200,7 +200,7 @@ def main():
         print('当前日期是假期，不用发送周报')
 
 
-popen = os.popen('cd /Users/luokaiwen/project/python/work_log && ')
+popen = os.popen('cd /Users/luokaiwen/project/python/work_log && /usr/bin/git pull')
 popen2 = os.popen('echo $PWD')
 print(popen.readlines())
 print(popen2.readlines())
