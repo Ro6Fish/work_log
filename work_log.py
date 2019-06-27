@@ -205,6 +205,7 @@ popen2 = os.popen('echo $PWD')
 print(popen.readlines())
 print(popen2.readlines())
 # os.popen('cd %s git pull' % dir_path)
+# os.popen('cd % && git pull' % dir_path)
 
 # 执行程序
 # main()
