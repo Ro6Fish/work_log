@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-git pull
+project_path=$(cd `dirname $0`; pwd)
 
-git add .
+cd ${project_path}
 
-git commit -m "更新文档"
+/usr/bin/git pull
 
-git push
+/usr/bin/git add .
+
+/usr/bin/git commit -m "更新文档"
+
+/usr/bin/git push

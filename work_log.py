@@ -200,14 +200,9 @@ def main():
         print('当前日期是假期，不用发送周报')
 
 
-popen = os.popen('cd /Users/luokaiwen/project/python/work_log && /usr/bin/git pull')
-popen2 = os.popen('echo $PWD')
-print(popen.readlines())
-print(popen2.readlines())
-# os.popen('cd %s git pull' % dir_path)
-# os.popen('cd % && git pull' % dir_path)
+popen = os.popen('cd %s && /usr/bin/git pull' % dir_path)
 
 # 执行程序
-# main()
+main()
 
-# os.popen(path.join(dir_path, 'git.sh'))
+os.popen(path.join(dir_path, 'git.sh'))
