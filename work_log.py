@@ -200,7 +200,9 @@ def main():
         print('当前日期是假期，不用发送周报')
 
 
-popen = os.popen('cd %s && /usr/bin/git pull' % dir_path)
+#popen = os.popen('cd %s && /usr/bin/git pull' % dir_path)
+
+os.popen(path.join(dir_path, 'git.sh'))
 
 # 执行程序
 main()
