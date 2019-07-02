@@ -17,8 +17,8 @@ conf = configparser.ConfigParser()
 
 conf.read(path.join(dir_path, 'config.ini'))
 
-# base_datetime = datetime.datetime.now()
-base_datetime = datetime.datetime.strptime('2019-06-28', '%Y-%m-%d')
+base_datetime = datetime.datetime.now()
+# base_datetime = datetime.datetime.strptime('2019-06-28', '%Y-%m-%d') # 测试
 
 # 接口是否正常，默认true正常
 is_api_ok = True
@@ -200,7 +200,7 @@ def main():
         print('当前日期是假期，不用发送周报')
 
 
-#popen = os.popen('cd %s && /usr/bin/git pull' % dir_path)
+# popen = os.popen('cd %s && /usr/bin/git pull' % dir_path)
 
 os.popen(path.join(dir_path, 'git.sh'))
 
