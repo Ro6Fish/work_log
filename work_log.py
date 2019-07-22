@@ -202,9 +202,9 @@ def main():
 
 # popen = os.popen('cd %s && /usr/bin/git pull' % dir_path)
 
-os.popen(path.join(dir_path, 'git.sh'))
+os.popen(path.join(dir_path, 'sync.sh'))
 
 # 执行程序
 main()
 
-os.popen(path.join(dir_path, 'git.sh'))
+os.popen(path.join(dir_path, 'sync.sh'))
